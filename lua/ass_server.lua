@@ -780,15 +780,15 @@ function ASS_BanPlayer( PLAYER, UNIQUEID, TIME, REASON )
 		
 		end
 
-		//if ((TIME == 0 || TIME > tonumber(ASS_Config["max_temp_admin_ban_time"])) && !PLAYER:IsAdmin()) then
-		//
-		//	// Admin and Super Admin can permaban people, Temp admins can only
-		//	// temporary ban people
-		//	
-		//	ASS_MessagePlayer(PLAYER, "\"" .. TO_BAN:Nick() .. "\" can only be banned for " .. ASS_Config["max_temp_admin_ban_time"] .. " minutes or less by a temporary admin")
-		//	TIME = tonumber(ASS_Config["max_temp_admin_ban_time"])			
-		//	
-		//end
+		if ((TIME == 0 || TIME > tonumber(ASS_Config["max_temp_admin_ban_time"])) && !PLAYER:IsAdmin()) then
+		
+			// Admin and Super Admin can permaban people, Temp admins can only
+			// temporary ban people
+			
+			ASS_MessagePlayer(PLAYER, "\"" .. TO_BAN:Nick() .. "\" can only be banned for " .. ASS_Config["max_temp_admin_ban_time"] .. " minutes or less by a temporary admin")
+			TIME = tonumber(ASS_Config["max_temp_admin_ban_time"])			
+		
+		end
 
 		if (ASS_RunPluginFunction( "AllowPlayerBan", true, PLAYER, TO_KICK, TIME, REASON )) then
 			
@@ -987,9 +987,9 @@ concommand.Add( "ASS_UnbanList",
 			ASS_BeginProgress("ASS_BannedPlayer", "Recieving banned list...", n)
 			for id, entry in pairs(PlayerRankings) do
 				if (entry.Rank == ASS_LVL_BANNED) then
-					umsg.Start("ASS_BannedPlayer", pl) 
-					 umsg.String(entry.Name)
-						umsg.String(id)
+					umsg.Start("ASS_BannedPlayer", pl)
+						umsg.String( entry.Name )
+						umsg.String( id )
 					umsg.End()
 				end
 			end

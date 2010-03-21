@@ -1,3 +1,4 @@
+
 include("ass_shared.lua")
 
 ASS_Initialized = false
@@ -233,7 +234,7 @@ function ASS_FixMenu( MENU )
 		pnl.OnMouseReleased = DMenuOption_OnMouseReleased
  		pnl.Paint = DMenuOption_Paint
  		pnl.SetImage = DMenuOption_SetImage
-  		pnl:SetText(strText) 
+  		pnl:SetText( strText ) 
  		if ( funcFunction ) then 
  			pnl.DoClick = function(self) 
  					self.ClickReturn = funcFunction(pnl) 
@@ -775,7 +776,7 @@ function ASS_Initialize_B()
 end
 concommand.Add("ASS_CS_Initialize", ASS_Initialize_B)
 
-usermessage.Hook("ASS_BannedPlayer", 
+usermessage.Hook( "ASS_BannedPlayer", 
 			function(UM)
 				ASS_IncProgress("ASS_BannedPlayer")
 				local name = UM:ReadString()
