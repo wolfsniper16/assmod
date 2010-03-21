@@ -14,6 +14,17 @@ local DEFAULT_WEAPON_TABLE = {
 
 	{	text = "GravGun",		item = "weapon_physcannon"	},
 	{	text = "Physgun",		item = "weapon_physgun"		},
+	{	text = "Crowbar",		item = "weapon_crowbar"		},
+	{	text = "Stunstick",		item = "weapon_stunstick"	},
+	{	text = "Pistol",		item = "weapon_pistol"		},
+	{	text = ".357",			item = "weapon_357"		},
+	{	text = "SMG",			item = "weapon_smg1"		},
+	{	text = "Shotgun",		item = "weapon_shotgun"		},
+	{	text = "Crossbow",		item = "weapon_crossbow"	},
+	{	text = "AR2",			item = "weapon_ar2"		},
+	{	text = "Bug Bait",		item = "weapon_bugbait"		},
+	{	text = "RPG",			item = "weapon_rpg"		},
+
 }
 
 local DEFAULT_ITEM_TABLE = {

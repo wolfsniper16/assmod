@@ -1,3 +1,4 @@
+//The Logs cleared amazingly fast so I bumped up the maximum size by 4 times
 
 local PLUGIN = {}
 
@@ -20,7 +21,7 @@ function PLUGIN.AddToLog(PLAYER, ACL, ACTION)
 	if (file.Exists(fn)) then
 		log = file.Read(fn)
 		
-		if (#log > 200000000000000000000000000000) then
+		if (#log > 80000) then
 			log = "Logs cleared!\n"
 		end
 	end
