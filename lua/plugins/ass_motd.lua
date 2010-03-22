@@ -44,7 +44,7 @@ if (CLIENT) then
 		local MOTDHTMLFrame = vgui.Create( "HTML", MOTDFrame )
 		MOTDHTMLFrame:SetPos( 25, 50 )
 		MOTDHTMLFrame:SetSize( MOTDFrame:GetWide() - 50, MOTDFrame:GetTall() - 150 )
-		MOTDHTMLFrame:OpenURL("http://www.gamersepoch.com/darkrpmotd/motd.php")
+		MOTDHTMLFrame:OpenURL("http://www.gamersepoch.com/phpBB3/viewtopic.php?f=32&t=260")
 
 		local CloseButton = vgui.Create( "DButton", MOTDFrame )
 		CloseButton:SetSize( 200, 50 )
